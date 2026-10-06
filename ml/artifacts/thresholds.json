@@ -1,0 +1,24 @@
+{
+  "min_conf": 0.94,
+  "min_margin": 0.6,
+  "routine_conf": 0.99,
+  "temperature": 1.3734,
+  "max_wait_min": 60,
+  "ood_energy_min": 2.6119,
+  "review_cap": 0.1,
+  "tuned_on": "validation",
+  "seed": 42,
+  "validation": {
+    "review_fraction": 0.05549389567147614,
+    "tumor_recall_not_routine": 1.0,
+    "tumors_sent_to_routine": 0,
+    "misclassified": 11,
+    "errors_caught_by_verifier": 11,
+    "errors_reaching_routine": 0,
+    "tier_counts": {
+      "URGENT": 728,
+      "REVIEW": 50,
+      "ROUTINE": 123
+    }
+  }
+}

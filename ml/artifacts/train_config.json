@@ -1,0 +1,22 @@
+{
+  "data": "C:\\Users\\abhir\\Downloads\\newproject2.0\\Neuroqueue-main (2)\\Neuroqueue-main\\ml\\data\\raw",
+  "epochs": 12,
+  "batch": 32,
+  "lr": 0.0003,
+  "seed": 42,
+  "review_cap": 0.1,
+  "workers": 4,
+  "classes": [
+    "glioma",
+    "meningioma",
+    "pituitary",
+    "no_tumor"
+  ],
+  "tumor_classes": [
+    "glioma",
+    "meningioma",
+    "pituitary"
+  ],
+  "torch": "2.11.0+cu128",
+  "device": "cuda"
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "file": "demo_01.jpg",
+    "true_label": "meningioma",
+    "predicted": "meningioma",
+    "top_prob": 0.8553,
+    "expected_tier": "REVIEW",
+    "model_correct": true
+  },
+  {
+    "file": "demo_02.jpg",
+    "true_label": "glioma",
+    "predicted": "glioma",
+    "top_prob": 0.9951,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_03.jpg",
+    "true_label": "pituitary",
+    "predicted": "pituitary",
+    "top_prob": 0.9786,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_04.jpg",
+    "true_label": "meningioma",
+    "predicted": "meningioma",
+    "top_prob": 0.9998,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_05.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 0.9986,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  },
+  {
+    "file": "demo_06.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 0.9983,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  },
+  {
+    "file": "demo_07.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 0.999,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  },
+  {
+    "file": "demo_08.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 0.9998,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  },
+  {
+    "file": "demo_09.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 1.0,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  },
+  {
+    "file": "demo_10.jpg",
+    "true_label": "meningioma",
+    "predicted": "meningioma",
+    "top_prob": 0.9886,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_11.jpg",
+    "true_label": "pituitary",
+    "predicted": "pituitary",
+    "top_prob": 0.9997,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_12.jpg",
+    "true_label": "meningioma",
+    "predicted": "meningioma",
+    "top_prob": 0.9184,
+    "expected_tier": "REVIEW",
+    "model_correct": true
+  },
+  {
+    "file": "demo_13.jpg",
+    "true_label": "meningioma",
+    "predicted": "meningioma",
+    "top_prob": 0.9992,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_14.jpg",
+    "true_label": "glioma",
+    "predicted": "glioma",
+    "top_prob": 0.9997,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_15.jpg",
+    "true_label": "meningioma",
+    "predicted": "no_tumor",
+    "top_prob": 0.5039,
+    "expected_tier": "REVIEW",
+    "model_correct": false
+  },
+  {
+    "file": "demo_16.jpg",
+    "true_label": "glioma",
+    "predicted": "glioma",
+    "top_prob": 0.9882,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_17.jpg",
+    "true_label": "pituitary",
+    "predicted": "pituitary",
+    "top_prob": 0.9995,
+    "expected_tier": "URGENT",
+    "model_correct": true
+  },
+  {
+    "file": "demo_18.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 0.9999,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  },
+  {
+    "file": "demo_19.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 0.9964,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  },
+  {
+    "file": "demo_20.jpg",
+    "true_label": "no_tumor",
+    "predicted": "no_tumor",
+    "top_prob": 0.9989,
+    "expected_tier": "ROUTINE",
+    "model_correct": true
+  }
+]

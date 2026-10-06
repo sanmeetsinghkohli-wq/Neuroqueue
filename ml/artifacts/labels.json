@@ -1,0 +1,21 @@
+{
+  "index_to_class": {
+    "0": "glioma",
+    "1": "meningioma",
+    "2": "pituitary",
+    "3": "no_tumor"
+  },
+  "display": {
+    "glioma": "Glioma",
+    "meningioma": "Meningioma",
+    "pituitary": "Pituitary Tumor",
+    "no_tumor": "No Tumor"
+  },
+  "dataset_folders": {
+    "glioma": "glioma",
+    "meningioma": "meningioma",
+    "pituitary": "pituitary",
+    "no_tumor": "notumor"
+  },
+  "source": "Written by ml/train.py from the class order used in training. The API refuses to load a model whose mapping differs."
+}

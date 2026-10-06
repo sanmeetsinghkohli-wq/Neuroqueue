@@ -1,0 +1,246 @@
+{
+  "dataset": {
+    "name": "Brain Tumor MRI Dataset (Kaggle, M. Nickparvar)",
+    "license": "CC0-1.0",
+    "total_indexed": 7200,
+    "unreadable": 0,
+    "duplicates_removed": 1144,
+    "label_conflicts_removed": 49,
+    "kept": 6007,
+    "splits": {
+      "train": {
+        "glioma": 1212,
+        "meningioma": 1149,
+        "pituitary": 1210,
+        "no_tumor": 634
+      },
+      "val": {
+        "glioma": 260,
+        "meningioma": 246,
+        "pituitary": 259,
+        "no_tumor": 136
+      },
+      "test": {
+        "glioma": 260,
+        "meningioma": 246,
+        "pituitary": 259,
+        "no_tumor": 136
+      }
+    },
+    "seed": 42
+  },
+  "model": {
+    "backbone": "efficientnet_b0",
+    "input": 224,
+    "epochs": 12,
+    "device": "cuda",
+    "best_val_acc": 0.9878,
+    "train_seconds": 360
+  },
+  "test": {
+    "n": 901,
+    "accuracy": 0.9867,
+    "per_class": {
+      "glioma": {
+        "precision": 1.0,
+        "recall": 0.9885,
+        "support": 260
+      },
+      "meningioma": {
+        "precision": 0.9877,
+        "recall": 0.9797,
+        "support": 246
+      },
+      "pituitary": {
+        "precision": 0.9923,
+        "recall": 0.9923,
+        "support": 259
+      },
+      "no_tumor": {
+        "precision": 0.9504,
+        "recall": 0.9853,
+        "support": 136
+      }
+    },
+    "classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "no_tumor"
+    ],
+    "confusion_matrix": [
+      [
+        257,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        241,
+        0,
+        5
+      ],
+      [
+        0,
+        1,
+        257,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        134
+      ]
+    ],
+    "tumor_vs_no_tumor": {
+      "tumor_recall": 0.9908,
+      "no_tumor_recall": 0.9853
+    },
+    "calibration": {
+      "temperature": 1.3734,
+      "ece": 0.0041,
+      "ece_uncalibrated": 0.0081,
+      "ece_val_before": 0.012,
+      "ece_val_after": 0.009,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "confidence": null,
+          "accuracy": null,
+          "count": 0
+        },
+        {
+          "bin": "0.1-0.2",
+          "confidence": null,
+          "accuracy": null,
+          "count": 0
+        },
+        {
+          "bin": "0.2-0.3",
+          "confidence": null,
+          "accuracy": null,
+          "count": 0
+        },
+        {
+          "bin": "0.3-0.4",
+          "confidence": null,
+          "accuracy": null,
+          "count": 0
+        },
+        {
+          "bin": "0.4-0.5",
+          "confidence": 0.4401,
+          "accuracy": 1.0,
+          "count": 1
+        },
+        {
+          "bin": "0.5-0.6",
+          "confidence": 0.5612,
+          "accuracy": 0.5,
+          "count": 6
+        },
+        {
+          "bin": "0.6-0.7",
+          "confidence": 0.6477,
+          "accuracy": 0.75,
+          "count": 4
+        },
+        {
+          "bin": "0.7-0.8",
+          "confidence": 0.7659,
+          "accuracy": 0.8,
+          "count": 5
+        },
+        {
+          "bin": "0.8-0.9",
+          "confidence": 0.8683,
+          "accuracy": 0.8333,
+          "count": 6
+        },
+        {
+          "bin": "0.9-1.0",
+          "confidence": 0.9954,
+          "accuracy": 0.9932,
+          "count": 879
+        }
+      ]
+    },
+    "verifier": {
+      "review_fraction": 0.04550499445061043,
+      "tumor_recall_not_routine": 0.9986928104575163,
+      "tumors_sent_to_routine": 1,
+      "misclassified": 12,
+      "errors_caught_by_verifier": 11,
+      "errors_reaching_routine": 1,
+      "tier_counts": {
+        "URGENT": 737,
+        "REVIEW": 41,
+        "ROUTINE": 123
+      }
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0992,
+      "val_acc": 0.8679
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3725,
+      "val_acc": 0.929
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.197,
+      "val_acc": 0.9445
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.1245,
+      "val_acc": 0.9623
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.0823,
+      "val_acc": 0.9634
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.0588,
+      "val_acc": 0.9767
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.0404,
+      "val_acc": 0.9811
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.0375,
+      "val_acc": 0.9778
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.0232,
+      "val_acc": 0.9822
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.0173,
+      "val_acc": 0.9856
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.0144,
+      "val_acc": 0.9878
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.0116,
+      "val_acc": 0.9856
+    }
+  ]
+}

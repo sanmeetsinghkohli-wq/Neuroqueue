@@ -1,0 +1,6 @@
+# Training only (the API serves the exported ONNX model and needs none of these).
+# For RTX 50-series: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+torch
+torchvision
+onnx
+matplotlib

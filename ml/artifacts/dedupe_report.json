@@ -1,0 +1,28 @@
+{
+  "total_indexed": 7200,
+  "unreadable": 0,
+  "duplicates_removed": 1144,
+  "label_conflicts_removed": 49,
+  "kept": 6007,
+  "splits": {
+    "train": {
+      "glioma": 1212,
+      "meningioma": 1149,
+      "pituitary": 1210,
+      "no_tumor": 634
+    },
+    "val": {
+      "glioma": 260,
+      "meningioma": 246,
+      "pituitary": 259,
+      "no_tumor": 136
+    },
+    "test": {
+      "glioma": 260,
+      "meningioma": 246,
+      "pituitary": 259,
+      "no_tumor": 136
+    }
+  },
+  "seed": 42
+}

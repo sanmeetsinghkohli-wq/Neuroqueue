@@ -1,0 +1,7 @@
+node_modules
+.next
+.env*
+scripts/strings.*.json
+tsconfig.tsbuildinfo
+LOGIN_DETAILS.txt
+submission/

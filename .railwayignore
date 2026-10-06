@@ -1,0 +1,17 @@
+.venv/
+frontend/
+ml/data/
+ml/artifacts/model.pt
+ml/artifacts/splits.json
+ml/artifacts/threshold_sweep.json
+backend/data/
+backend/.env
+backend/tests/
+backend/.pytest_cache/
+**/__pycache__/
+node_modules/
+.claude/
+docs/
+sim/
+LOGIN_DETAILS.txt
+submission/

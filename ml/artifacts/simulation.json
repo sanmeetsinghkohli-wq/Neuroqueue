@@ -1,0 +1,62 @@
+{
+  "policies": {
+    "fcfs": {
+      "urgent_mean_wait_min": 17.8,
+      "urgent_p90_wait_min": 43.3,
+      "no_tumor_mean_wait_min": 17.4,
+      "no_tumor_p90_wait_min": 43.6,
+      "all_mean_wait_min": 17.5,
+      "scans_simulated": 14472,
+      "true_tumor_scans_tiered_routine": 0,
+      "true_tumor_scans": 3601
+    },
+    "neuroqueue": {
+      "urgent_mean_wait_min": 6.5,
+      "urgent_p90_wait_min": 11.7,
+      "no_tumor_mean_wait_min": 21.1,
+      "no_tumor_p90_wait_min": 62.9,
+      "all_mean_wait_min": 17.5,
+      "scans_simulated": 14472,
+      "true_tumor_scans_tiered_routine": 0,
+      "true_tumor_scans": 3601
+    }
+  },
+  "chart": [
+    {
+      "metric": "Urgent: mean wait",
+      "FCFS": 17.8,
+      "NeuroQueue": 6.5
+    },
+    {
+      "metric": "Urgent: 90th pct",
+      "FCFS": 43.3,
+      "NeuroQueue": 11.7
+    },
+    {
+      "metric": "No tumor: mean wait",
+      "FCFS": 17.4,
+      "NeuroQueue": 21.1
+    },
+    {
+      "metric": "All scans: mean wait",
+      "FCFS": 17.5,
+      "NeuroQueue": 17.5
+    }
+  ],
+  "assumptions": {
+    "arrivals_per_hour": 9.0,
+    "read_minutes": 6.0,
+    "urgent_fraction": 0.25,
+    "hours": 8.0,
+    "radiologists": 1,
+    "replications": 200,
+    "seed": 7,
+    "prediction_source": "held-out test-set predictions (ml/artifacts/test_predictions.json)",
+    "second_opinion": "not used in the simulation (stricter routine bar applies)",
+    "urgent_definition": "scans whose true label is a tumor class",
+    "arrival_process": "Poisson arrivals across the working day; reading continues until the queue is empty",
+    "reading": "fixed minutes per scan, every scan is read under both policies",
+    "max_wait_min": 60
+  },
+  "disclaimer": "Simulated waiting times under the assumptions listed. Not clinical outcomes."
+}
