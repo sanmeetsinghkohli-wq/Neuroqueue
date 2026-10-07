@@ -76,6 +76,16 @@ Also included: full English and Arabic (right-to-left) interface, a help assista
 | **Qwen (Alibaba Cloud Model Studio)** | Words the report from the doctor's confirmed fields; answers help questions; explains a tier in plain language | Never sees the image; never classifies; never checks or approves a report |
 | **AssemblyAI** (streaming speech-to-text) | Voice input for the help assistant | — |
 
+**Where each model is used, and how it is called**
+
+| Model | Where it is used | How it is called |
+|---|---|---|
+| **EfficientNet-B0 (ours)** | Classifies every uploaded scan | Runs inside our backend as ONNX. No outside service sees the image |
+| **Qwen3.8-Max** | Drafts the report wording after the doctor's review; translated the interface text into Arabic | Alibaba Cloud Model Studio, from the backend only. It receives the doctor's confirmed fields, never the image |
+| **Qwen3.8-Flash** | Help assistant answers; the plain-language "why this tier" explanation | Alibaba Cloud Model Studio, from the backend only, streamed word by word |
+| **AssemblyAI streaming** | Voice input for the help assistant | The browser streams microphone audio using a 5-minute token issued by our backend; the key stays on the server |
+| **Qwen3.8-Max in Qoder** | Development only: animation integration and some SQL queries | Used inside the Qoder coding tool while building, not in the running product |
+
 **Data.** Brain Tumor MRI Dataset (Kaggle, M. Nickparvar, CC0 licence): 7,200 images indexed. We removed 1,144 duplicate images and 49 with conflicting labels before splitting, so the same image can never appear in both training and test. 6,007 images kept, split 70 / 15 / 15.
 
 **Measured results on the 901 held-out test images**
@@ -91,7 +101,9 @@ Also included: full English and Arabic (right-to-left) interface, a help assista
 
 Thresholds were tuned on the validation split only, then measured once on the test split.
 
-**Built with Qoder.** We used Qoder for parts of the code, for example the interface animations.
+**Built with Qoder.** We used Qoder, with the Qwen3.8-Max model selected, for two parts of the build: integrating the interface animations into the web application, and writing some of the SQL queries for the database schema. The screenshot below is from one of those sessions.
+
+![Proof: a Qoder session with Qwen3.8-Max selected, working on our database schema SQL.](screenshots/16-qoder-session.jpg)
 
 **Stack.** Next.js 15, React 19, Tailwind, three.js (frontend, on Vercel) · FastAPI, ONNX Runtime, ReportLab (backend, on Railway) · Supabase Postgres and Storage · WebSockets for live updates · PyTorch for training · 87 automated backend tests.
 
