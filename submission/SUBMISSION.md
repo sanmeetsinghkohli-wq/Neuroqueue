@@ -222,13 +222,20 @@ The trade-off is explicit: normal scans wait a few minutes longer so that tumour
 - Not a medical device and not clinically validated. The waiting-time result is a simulation.
 - Demo deployment on trial hosting; not yet configured for regulated health data.
 
-**Next steps**
+**Before real clinical use**
 
 1. Validate on data from other scanners and sites, with radiologist-labelled ground truth.
-2. Support DICOM and full MRI series, and connect to hospital PACS / RIS.
-3. Run a reader study measuring real time-to-read and reporting time.
-4. Translate the PDFs and patient summary into Arabic (the interface already is).
-5. Move to compliant hosting with data-residency controls, and begin the regulatory pathway for decision-support software.
+2. Run a reader study measuring real time-to-read and reporting time.
+3. Move to compliant hosting with data-residency controls, and begin the regulatory pathway for decision-support software.
+
+**Future scope**
+
+1. **PACS and RIS integration.** Pull scans directly from the hospital's imaging system and push the signed report back, so nobody uploads anything by hand.
+2. **Arabic reports.** The interface is already bilingual; next, the PDFs and the patient summary in Arabic too.
+3. **Notifications.** An SMS or email to the patient when their report is ready, and an alert to the doctor when an Urgent scan is assigned.
+4. **Beyond brain tumours.** Today it handles brain tumours. The same queue-and-report flow can serve any tumour type with a model trained for it.
+5. **Tumour segmentation.** Outline the tumour and measure its size automatically, so the doctor confirms a measurement instead of typing one.
+6. **Mobile app.** Patients view their report on their phone; doctors get urgent alerts.
 
 ---
 
