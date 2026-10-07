@@ -224,10 +224,10 @@ The trade-off is explicit: normal scans wait a few minutes longer so that tumour
 
 | Member | Responsibility |
 |---|---|
-| **Veera Siva Abhishek** | Product lead: clinical workflow, the three roles and the administrator portal |
-| **Veera Siva Abhiram** | AI model: dataset preparation, training, evaluation and thresholds |
-| **Sanmeet** | Web application: interface, animations and the English / Arabic experience |
-| **Mohamed Abubakker** | Backend, deployment, testing and the demo |
+| **Veera Siva Abhishek** | Team lead. Backend with Sanmeet; Google sign-in and account access; portal design and workflows after login; the English / Arabic experience; chatbot and voice assistant integration |
+| **Veera Siva Abhiram** | Web application: interface and animations |
+| **Sanmeet** | AI model (dataset, training, evaluation) and the backend with Abhishek |
+| **Mohamed Abubakker** | Audit: the audit trail inside the web application |
 
 The whole team owns the product decisions and the safety rules described above.
 

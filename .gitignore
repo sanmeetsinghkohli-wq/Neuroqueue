@@ -20,3 +20,4 @@ LOGIN_DETAILS.txt
 .claude/
 *.log
 frontend/scripts/strings.*.json
+~$*
