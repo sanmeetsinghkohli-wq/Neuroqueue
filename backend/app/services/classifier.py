@@ -70,6 +70,10 @@ class OnnxClassifier:
         self.version = "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()[:12]
         opts = ort.SessionOptions()
         opts.intra_op_num_threads = 4
+        # Without these, ONNX Runtime keeps every buffer it has ever needed: one heatmap pushed the process past 1 GB
+        # and the host killed it. Measured: same speed, and memory stays flat at the size of the loaded model.
+        opts.enable_cpu_mem_arena = False
+        opts.enable_mem_pattern = False
         self.sess = ort.InferenceSession(str(path), opts, providers=["CPUExecutionProvider"])
         th = load_thresholds()
         self.T = float(th.get("temperature") or 1.0)
@@ -77,8 +81,8 @@ class OnnxClassifier:
 
     def probs_batch(self, batch: np.ndarray) -> np.ndarray:
         out = []
-        for i in range(0, len(batch), 32):
-            out.append(self.sess.run(None, {"input": batch[i:i + 32].astype(np.float32)})[0])
+        for i in range(0, len(batch), 8):   # small chunks keep peak memory low (see __init__)
+            out.append(self.sess.run(None, {"input": batch[i:i + 8].astype(np.float32)})[0])
         return _softmax(np.concatenate(out) / self.T)
 
     def predict(self, data: bytes, filename: str = "") -> dict:
