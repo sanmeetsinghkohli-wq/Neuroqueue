@@ -1,6 +1,6 @@
 # NeuroQueue
 
-**Live site: https://neuroqueue-one.vercel.app**  ·  [Launch video](submission/NeuroQueue-launch-video.mp4)  ·  [Submission document](submission/SUBMISSION.md)
+**Live site: https://neuroqueue-one.vercel.app**  ·  [Launch video](submission/NeuroQueue-launch-video.mp4)  ·  [Pitch deck](submission/NeuroQueue-Pitch-Deck.pptx)  ·  [Submission document](submission/SUBMISSION.md)
 
 AI-assisted brain MRI reporting. Our trained MRI model classifies each scan, the queue is sorted into **Urgent**,
 **Review** and **Routine** in real time, and a doctor reviews, approves and finalizes an official report that the
